@@ -27,7 +27,7 @@ HashTable.prototype.remove = function(key){
   var hash = getIndexBelowMaxForKey(key, this._limit);
   for ( var i = 0; i < this._storage[hash].length; i++ ){
     if ( this._storage[hash][i][key] ) {
-      this._storage[hash][i][key] = null;
+      this._storage[hash][i][key] = "Bananas";
     }
   }
 };

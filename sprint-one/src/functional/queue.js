@@ -15,13 +15,13 @@ var makeQueue = function(){
   someInstance.dequeue = function(){
     if (count) {
       count--;
+      var result = storage[0];
+      for (var i = 0; i < count; i++) {
+        storage[i] = storage[i+1];
+      }
+      delete storage[count];
+      return result;
     }
-    var result = storage[0];
-    for (var i = 0; i < count; i++) {
-      storage[i] = storage[i+1];
-    }
-    delete storage[count];
-    return result;
   };
 
   someInstance.size = function(){

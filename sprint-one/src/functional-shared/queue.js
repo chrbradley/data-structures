@@ -20,8 +20,8 @@ var queueMethods = {
         this.storage[i] = this.storage[i+1];
       }
       delete this.storage[this.count];
+      return result;
     }
-    return result;
   },
 
   size: function() {

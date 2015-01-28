@@ -19,7 +19,6 @@ var treeMethods = {
 
   contains: function(target){
     var checkTarget = function(node) {
-      console.log(node.value);
       if (node.value === target) {
         return true;
       } else if (node.children.length !== 0) {

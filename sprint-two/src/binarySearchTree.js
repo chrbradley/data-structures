@@ -79,11 +79,11 @@ var binaryTreeMethods = {
 };
 
 
-var binarySearchTree = makeBinarySearchTree(5);
-binarySearchTree.insert(2);
-binarySearchTree.insert(3);
-binarySearchTree.insert(7);
-binarySearchTree.insert(6);
+// var binarySearchTree = makeBinarySearchTree(5);
+// binarySearchTree.insert(2);
+// binarySearchTree.insert(3);
+// binarySearchTree.insert(7);
+// binarySearchTree.insert(6);
 
 /*
  * Complexity: What is the time complexity of the above functions?

@@ -33,7 +33,6 @@ HashTable.prototype.insert = function(key, value){
 
   // resize if necessary
   if (this._count > this._limit * 0.75) {
-    console.dir(this._count);
     this._resize(this._limit * 2);
   }
 
@@ -77,11 +76,9 @@ HashTable.prototype.remove = function(key){
 
 HashTable.prototype._resize = function(newLimit) {
   var oldStorage = this._storage;
-  console.dir(oldStorage);
   this._limit = newLimit;
   this._storage = makeLimitedArray(this._limit);
   this._count = 0;
-
 
   for (var index in oldStorage) {
     if (Array.isArray(oldStorage[index])) {
@@ -91,10 +88,7 @@ HashTable.prototype._resize = function(newLimit) {
       }
     }
   }
-
-  console.dir(this._storage);
-
-}
+};
 
 
 
